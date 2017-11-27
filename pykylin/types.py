@@ -2,7 +2,7 @@ from __future__ import absolute_import
 
 from sqlalchemy import types as sqltypes
 from sqlalchemy.types import INTEGER, BIGINT, SMALLINT, VARCHAR, CHAR, \
-    FLOAT, DATE, BOOLEAN
+    FLOAT, DATE, BOOLEAN, DECIMAL, TIMESTAMP
 
 class DOUBLE(sqltypes.Float):
     __visit_name__ = 'DOUBLE'
@@ -24,4 +24,6 @@ KYLIN_TYPE_MAP = {
     'FLOAT': FLOAT,
     'SMALLINT': SMALLINT,
     'VARCHAR': VARCHAR,
+    'DECIMAL': DECIMAL,
+    'TIMESTAMP': TIMESTAMP,
 }
